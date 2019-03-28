@@ -12,7 +12,7 @@ public class ProcessingThread extends Thread {
     private boolean isRunning = true;
     private String cardinalPoints;
 
-    public ProcessingThread(Context context, String cardinalPoints) {
+    ProcessingThread(Context context, String cardinalPoints) {
         this.context = context;
         this.cardinalPoints = cardinalPoints;
     }
@@ -23,7 +23,7 @@ public class ProcessingThread extends Thread {
         sleep();
         sendMessage();
 
-        Log.d("[ProcessingThread]", "Thread has stopped!");
+
 
     }
 
@@ -51,5 +51,6 @@ public class ProcessingThread extends Thread {
 
     void stopThread() {
         isRunning = false;
+        Log.d("[ProcessingThread]", "Thread has stopped!");
     }
 }

@@ -169,7 +169,7 @@ public class PracticalTest01Var01Activity extends AppCompatActivity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.d("MessageBroadcast", intent.getStringExtra("message"));
+            Log.d("[ProcessingThread]", intent.getStringExtra("message"));
         }
     }
 }
